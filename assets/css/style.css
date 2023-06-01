@@ -801,8 +801,8 @@
     .contact_information{
         /* change in my type */
         display: block;    
-        margin-bottom: var(--mb-2);
-        margin-top: var(--mb-2);
+/*         margin-bottom: var(--mb-2);
+        margin-top: var(--mb-2); */
         text-align: center;
         border-radius: .5rem;
         box-shadow: 0 2px 4px rgba(0, 0, 0, .15); 
