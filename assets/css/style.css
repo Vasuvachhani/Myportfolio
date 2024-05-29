@@ -440,36 +440,92 @@
     }
 
     /* ==================SKILLS================== */
+    .skills section {
+        padding: 2rem;
+        background: #f4f5f7;
+        text-align: center;
+    }
+    
+    .section_title {
+        font-size: 24px;
+        color: #333;
+    }
+    
+    .section_subtitle {
+        font-size: 16px;
+        color: #666;
+    }
+    
+    .skills_container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .skills_card {
+        flex-basis: calc(50% - 20px);
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+        text-align: left;
+        min-height: 250px;  /* Minimum height for consistency */
+    }
+    
     .skills_inn {
         display: flex;
-        flex-wrap: wrap; /* Allow items to wrap to the next line */
-        background: #ffffff;
-        border-radius: 10px;
-        box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.5);
-        padding: 2rem;
-        text-align: left;
+        flex-wrap: wrap; /* Enable wrapping */
+        gap: 10px;
+    }
+    
+    .skills_title {
+        text-align: center;
+        font-size: 22px;
+        margin-bottom: 1rem;
+    }
+    
+    .skills_list {
+        list-style: none;
+        padding: 1.5rem;
+        width: 100%; /* Full width of its parent */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Create three columns */
+        gap: 20px;
+    }
+    
+    .skills_item {
+        display: flex;
         align-items: center;
-        font-size: large;
-        justify-content: center;
+        font-size:larger;
     }
     
-    .skills_inn li {
-        padding: 10px;
+    .uil-check-circle {
+        color: green;
+        margin-right: 10px;
     }
     
-    /* Media query for smaller screens */
-    @media screen and (max-width: 768px) {
-        .skills_inn {
-            padding: 1rem; /* Adjust padding for smaller screens */
-            font-size: medium;
+    @media (max-width: 768px) {
+        .skills_item {
+            display: flex;
+            align-items: center;
+            font-size:large;
         }
-        
+
+        .skills_container {
+            flex-direction: column;
+            align-items: center;
+        }
+    
         .skills_card {
-            margin-bottom: 1rem; /* Add some space between skill cards on smaller screens */
+            flex-basis: 100%;
+            min-height: 250px;  /* Adjust min-height for smaller screens */
+        }
+    
+        .skills_list {
+            grid-template-columns: 1fr 1fr; /* Adjust to 2 columns on smaller screens */
         }
     }
     
-        
     
     /* ==================QUALIFICATION=============== */
     .qualification_tabs{
