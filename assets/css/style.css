@@ -460,6 +460,7 @@
         display: flex;
         justify-content: center;
         gap: 20px;
+        flex-wrap: wrap; /* Ensure the cards wrap on smaller screens */
     }
     
     .skills_card {
@@ -469,7 +470,9 @@
         box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
         padding: 1rem;
         text-align: left;
-        min-height: 250px;  /* Minimum height for consistency */
+        min-height: 250px; /* Minimum height for consistency */
+        width: 100%; /* Ensure full width in the container */
+        box-sizing: border-box; /* Include padding and border in the element's total width and height */
     }
     
     .skills_inn {
@@ -486,17 +489,17 @@
     
     .skills_list {
         list-style: none;
-        padding: 1.5rem;
+        padding: 0.5rem;
         width: 100%; /* Full width of its parent */
         display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Create three columns */
+        grid-template-columns: repeat(2, 1fr); /* Create two columns */
         gap: 20px;
     }
     
     .skills_item {
         display: flex;
         align-items: center;
-        font-size:larger;
+        font-size: larger;
     }
     
     .uil-check-circle {
@@ -505,12 +508,6 @@
     }
     
     @media (max-width: 768px) {
-        .skills_item {
-            display: flex;
-            align-items: center;
-            font-size:large;
-        }
-
         .skills_container {
             flex-direction: column;
             align-items: center;
@@ -518,13 +515,18 @@
     
         .skills_card {
             flex-basis: 100%;
-            min-height: 250px;  /* Adjust min-height for smaller screens */
+            min-height: 250px; /* Adjust min-height for smaller screens */
         }
     
         .skills_list {
             grid-template-columns: 1fr 1fr; /* Adjust to 2 columns on smaller screens */
         }
     }
+    
+    body.dark-theme .skills_card {
+        background: var(--skills-card-bg); /* Dark theme background for skill cards */
+    }
+    
     
     
     /* ==================QUALIFICATION=============== */
